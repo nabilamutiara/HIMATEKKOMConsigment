@@ -1,0 +1,298 @@
+/* Mengatur agar html dan body memenuhi tinggi layar */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gradasi background */
+body {
+    font-family: 'Lexend', sans-serif;
+    background-color: #fff;
+}
+
+/* Mengatur navbar agar tampil responsif */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Logo dan teks di navbar */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo span {
+    font-weight: bold;
+    color: #FF7F32;
+    font-size: 18px;
+}
+
+/* Kontainer untuk navigasi */
+nav {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-left: 120px;
+}
+
+.nav-container {
+    background-color: rgba(189, 188, 187, 0.111);
+    border-radius: 20px;
+    padding: 15px 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    border: 1px solid #FF7F32;
+}
+
+.nav-container:hover {
+    background-color: rgba(255, 127, 50, 0.2);
+}
+
+/* Link navigasi */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FF7F32;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 40px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #FF7F32;
+    color: #fff;
+}
+
+/* Tombol "Sell Product" */
+.sell-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 170px;
+    text-decoration: none;
+    background-color: #FF7F32; /* Warna oranye */
+    color: #fff;
+    padding: 15px 40px; /* Lebih banyak padding kanan kiri agar lebih lebar */
+    border-radius: 10px; /* Membuat bagian atas dan bawah melengkung, tapi sisi kiri dan kanan tetap lurus */
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Efek bayangan */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 13px;
+    gap: 10px; /* Jarak antara ikon dan teks */
+}
+
+.sell-button:hover {
+    background-color: #e06e27;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25); /* Efek bayangan saat hover */
+}
+
+/* Ikon di dalam tombol (kotak dengan tanda +) */
+.sell-button .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #fff; /* Border putih */
+    color: #fff; /* Warna ikon plus */
+    border-radius: 5px; /* Membuat sudut kotak sedikit melengkung */
+    font-size: 20px; /* Ukuran ikon plus */
+    
+    text-align: center; /* Pastikan tanda + berada di tengah secara horizontal */
+    line-height: 18px; /* Samakan line-height dengan tinggi kotak untuk memastikan + di tengah vertikal */
+    padding: 0; /* Menghapus padding jika ada */
+}
+
+
+/* Kategori tombol dengan posisi fixed agar tidak menimpa produk */
+.category-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+    position: relative; /* Ubah absolute menjadi relative */
+    padding-left: 50px;
+}
+
+.category-button {
+    width: 210px; /* Lebar tetap untuk kedua tombol */
+    height: 30px; /* Tinggi tetap untuk kedua tombol */
+    border: 2px solid #FF7F32;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 13px;
+    color: #FF7F32;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: left; /* Tulisan rapat ke kiri */
+}
+ 
+.category-button:hover {
+    background-color: #FF7F32;
+    color: white;
+}
+
+/* Styling daftar produk agar sejajar dari kiri */
+.product-list {
+    display: flex;
+    gap: 35px;
+    flex-direction: row;
+    margin: 20px auto 0;
+    padding: 20px;
+    flex-wrap: wrap; /* Produk akan melanjutkan ke baris berikutnya jika lebar penuh */
+    padding-left: 50px;
+}
+
+/* Semua kotak produk dengan ukuran sama */
+.product-item {
+    position: relative; /* Memastikan bahwa bookmark diposisikan relatif terhadap kotak produk */
+    background-color: white;
+    border: 0.8px solid #4e4e4eb7; /* Border tipis */
+    border-radius: 10px;
+    width: 200px; /* Ukuran tetap untuk semua kotak produk */
+    height: 270px; /* Tinggi tetap untuk semua kotak produk */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Ukuran gambar tetap */
+.product-item img {
+    width: 150px;
+    height: 200px; /* Semua gambar ukuran sama */
+    margin-bottom: -10px;
+}
+
+/* Nama produk disejajarkan */
+.product-item h3 {
+    font-size: 11px;
+    color: #15516b;
+    height: 30px; /* Memberi ruang untuk teks yang lebih panjang */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.bookmark {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 6px; /* Smaller size */
+    height: 15px; /* Smaller size */
+    background-color: rgb(0, 65, 123); /* Transparent background */
+    border: 2px solid  rgb(0, 65, 123); /* Black border */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 50%, 0% 100%); /* Creating the bookmark shape */
+    cursor: pointer; /* Makes the bookmark clickable */
+}
+
+.bookmark:hover {
+    border-color: rgb(255, 0, 0); /* Changes the border color when hovered */
+}
+
+/* Styling untuk kategori button agar oval */
+.category-button {
+    width: 220px;
+    height: 40px;
+    border: 2px solid #FF7F32;
+    border-radius: 20px; /* Bentuk oval */
+    padding: 5px 15px;
+    font-size: 13px;
+    color: #FF7F32;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Warna tombol aktif */
+.category-button.active {
+    background-color: #FF7F32;
+    color: white;
+}
+
+/* Icon dropdown bulat di tengah */
+.dropdown-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #FF7F32;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.dropdown-icon::before {
+    content: '▼';
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 10px;
+    padding: 10px 0;
+    margin-top: 5px;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+    list-style: none;
+    padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #15516b;
+    font-size: 14px;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #FF7F32;
+    color: white;
+}
+
+/* Hover effect for category buttons */
+.category-button:hover {
+    background-color: #FF7F32;
+    color: white;
+}
