@@ -1,0 +1,82 @@
+.pagelogin {
+    /* Define the gradient background and image */
+    background: 
+        url('/public/img/group14.png'), /* Gambar */
+        linear-gradient(to bottom, #7ABCDE, #0072B8); /* Gradien */
+    background-size: 100% auto, cover; /* Gambar memenuhi lebar, tinggi disesuaikan, gradien tetap cover */
+    background-position: bottom; /* Posisi gambar di tengah */
+    background-repeat: no-repeat;
+
+    /* Gunakan aspect ratio untuk menyesuaikan tinggi sesuai lebar */
+    aspect-ratio: 16 / 9; /* Sesuaikan rasio jika perlu */
+    width: 100vw; /* Penuhi lebar perangkat */
+    height: auto; /* Tinggi menyesuaikan rasio */
+    justify-content: center;  /* Center horizontally */
+    align-items: center; 
+    display: flex;
+}
+
+.formlogin {
+    background-color: white;
+    border-radius: 10px;
+    padding: 80px 40px;
+    justify-content: center;  /* Center horizontally */
+    align-items: center; 
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tulisanlogin {
+    font-family: "Lexend", sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.username {
+    background-color: #F5F5F5;
+    padding: 5px 20px;
+    width: 400px;
+    border-radius: 10px;
+    font-family: "Lexend", sans-serif;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.email {
+    background-color: #F5F5F5;
+    padding: 5px 20px;
+    width: 400px;
+    border-radius: 10px;
+    font-family: "Lexend", sans-serif;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.password {
+    background-color: #F5F5F5;
+    padding: 5px 20px;
+    width: 400px;
+    border-radius: 10px;
+    font-family: "Lexend", sans-serif;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.forgotpassword {
+    display: flex;
+    justify-content: flex-end;
+    font-family: "Lexend", sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    width: 100%;
+}
+
+
+.getstarted {
+    background-color: #FCDC00;
+    width: 400px;
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-family: "Lexend", sans-serif;
+    text-align: center;
+}
+
